@@ -1,0 +1,31 @@
+{
+  "name": "homebridge-esphome",
+  "version": "0.1.0",
+  "description": "Homebridge plugin to control ESP8266/ESP32 devices running ESPHome firmware",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basdelfos/homebridge-esphome.git"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "iot",
+    "esphome",
+    "homebridge"
+  ],
+  "author": "Bas Delfos (b.delfos@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/basdelfos/homebridge-esphome/issues"
+  },
+  "homepage": "https://github.com/basdelfos/homebridge-esphome#readme",
+  "engines": {
+    "homebridge": ">=0.2.5"
+  },
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
