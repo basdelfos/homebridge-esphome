@@ -26,6 +26,12 @@
     "homebridge": ">=0.2.5"
   },
   "dependencies": {
+    "eventsource": "^1.0.7",
+    "fakegato-history": "^0.5.3",
+    "moment": "^2.24.0",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0"
   }
 }

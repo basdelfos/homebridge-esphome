@@ -42,12 +42,16 @@ class ESPHomePlatform {
             this.log.error('Device has no name configured.')
           }
           else if (!device.host) {
-            this.log.info('Device %s has no hostname configured.', device.name);
+            this.log.info('Device [%s] has no hostname configured.', device.name);
           }
           else if (!device.type) {
-            this.log.error('Device %s has no type configured.', device.name);
+            this.log.error('Device [%s] has no type configured.', device.name);
+          }
+          else if (!device.id) {
+            this.log.error('Device [%s] has no id configured.', device.name);
           }
           else {
+            device.port = device.port || 80;
             this.initializeAccessory(device);
           }
         }
