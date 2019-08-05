@@ -13,19 +13,39 @@ class EspHomeWebApi {
   stateEvent(callback) {
     this.log.debug('Starting State EventSource listener on', this.eventSource.url);
     this.eventSource.addEventListener('state', (e) => {
-      callback(e.data);
+      try {
+        const obj = JSON.parse(e.data);
+        callback(obj);
+      }
+      catch (error) {
+        callback(new Error('Could not parse json. ', error));
+      }
     });
   }
 
   logEvent(callback) {
+    this.log.debug('Starting Log EventSource listener on', this.eventSource.url);
     this.eventSource.addEventListener('log', (e) => {
-      callback(e.data);
+      try {
+        const obj = JSON.parse(e.data);
+        callback(obj);
+      }
+      catch (error) {
+        callback(new Error('Could not parse json. ', error));
+      }
     });
   }
 
   pingEvent(callback) {
+    this.log.debug('Starting Ping EventSource listener on', this.eventSource.url);
     this.eventSource.addEventListener('ping', (e) => {
-      callback(e.data);
+      try {
+        const obj = JSON.parse(e.data);
+        callback(obj);
+      }
+      catch (error) {
+        callback(new Error('Could not parse json. ', error));
+      }
     });
   }
 
