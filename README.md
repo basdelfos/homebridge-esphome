@@ -1,3 +1,5 @@
+!! THIS REPOSITORY IS NOG ACTIVELY MAINTAINED ANYMORE, PLEASE FEEL FREE TO CREATE FORK !!
+
 # homebridge-esphome
 
 Homebridge plugin to control ESP8266/ESP32 devices running ESPHome firmware (https://esphome.io)
